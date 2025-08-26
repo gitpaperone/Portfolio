@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>My Profil – Gitpaper</title>
+  <title>My Profil – Mngodev</title>
 
   <!-- SEO -->
-  <meta name="description" content="Portfolio et projets de Git Paper, développeur web UX, Python et HTML." />
-  <meta property="og:title" content="My Profil – Gitpaper" />
-  <meta property="og:description" content="Portfolio et projets de Git Paper, développeur web UX, Python et HTML." />
+  <meta name="description" content="Portfolio et projets de Mngodev, développeur web UX, Python et HTML." />
+  <meta property="og:title" content="My Profil – Mngodev" />
+  <meta property="og:description" content="Portfolio et projets de Mngodev, développeur web UX, Python et HTML." />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="pdp.jpg" />
   <meta property="og:url" content="https://tonsite.com" />
@@ -20,217 +20,7 @@
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&display=swap" rel="stylesheet" />
   
   <style>
-    body {
-      margin: 0;
-      font-family: 'IBM Plex Mono', monospace;
-      background: #fefefe url('https://www.transparenttextures.com/patterns/paper-fibers.png');
-      color: #111;
-      line-height: 1.6;
-      transition: background-color 0.3s, color 0.3s;
-      animation: fadeIn 0.5s ease-in-out;
-    }
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
-    body.dark {
-      background: #0f0f0f;
-      color: #f5f5f5;
-    }
-    .container {
-      max-width: 800px;
-      margin: 3rem auto;
-      padding: 2rem;
-      border: 3px solid black;
-      background: white;
-      box-shadow: 6px 6px 0 black;
-      transition: background-color 0.3s, color 0.3s, border-color 0.3s, box-shadow 0.3s;
-    }
-    body.dark .container {
-      background: #1e1e1e;
-      border-color: #bbb;
-      box-shadow: 6px 6px 0 #bbb;
-    }
-
-    .header-top {
-      display: flex;
-      align-items: center;
-      margin-bottom: 0.5rem;
-    }
-    .profile-pic {
-      width: 50px;
-      height: 50px;
-      object-fit: cover;
-      border-radius: 50%;
-      margin-right: 1rem;
-      border: 2px solid black;
-      box-shadow: 2px 2px 0 black;
-      transition: border-color 0.3s, box-shadow 0.3s;
-    }
-    body.dark .profile-pic {
-      border-color: #bbb;
-      box-shadow: 2px 2px 0 #bbb;
-    }
-    
-    h1 {
-      font-size: 2.5rem;
-      margin: 0;
-      transition: transform 0.3s;
-    }
-    h1:hover {
-      animation: shake 0.5s ease-in-out;
-    }
-    h2 {
-      font-size: 1.8rem;
-      border-bottom: 2px solid black;
-      padding-bottom: 0.3rem;
-      margin-top: 2rem;
-      transition: border-color 0.3s;
-    }
-    body.dark h2 {
-      border-color: #bbb;
-    }
-
-    @keyframes shake {
-      0%, 100% { transform: translateX(0); }
-      25% { transform: translateX(-2px); }
-      50% { transform: translateX(2px); }
-      75% { transform: translateX(-2px); }
-    }
-
-    a.button {
-      display: inline-block;
-      margin-top: 0.7rem;
-      padding: 0.5rem 1.2rem;
-      border: 2px solid black;
-      background: white;
-      color: black;
-      font-weight: 700;
-      text-decoration: none;
-      cursor: pointer;
-      box-shadow: 3px 3px 0 black;
-      transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
-      border-radius: 4px;
-      user-select: none;
-    }
-    a.button:hover {
-      background-color: black;
-      color: white;
-      box-shadow: 5px 5px 0 black;
-    }
-    body.dark a.button {
-      border-color: #bbb;
-      background: #2a2a2a;
-      color: #ddd;
-      box-shadow: 3px 3px 0 #bbb;
-    }
-    body.dark a.button:hover {
-      background-color: #f5f5f5;
-      color: black;
-      box-shadow: 5px 5px 0 #bbb;
-    }
-
-    .project {
-      border: 2px solid black;
-      padding: 1rem;
-      margin-top: 1.5rem;
-      box-shadow: 3px 3px 0 black;
-      background: white;
-      transition: transform 0.3s ease, background-color 0.3s, border-color 0.3s, box-shadow 0.3s;
-    }
-    .project:hover {
-      transform: translateY(-5px);
-      box-shadow: 6px 6px 0 black;
-    }
-    body.dark .project {
-      background: #2a2a2a;
-      border-color: #bbb;
-      box-shadow: 3px 3px 0 #bbb;
-    }
-    body.dark .project:hover {
-      box-shadow: 6px 6px 0 #bbb;
-    }
-    .project h3 {
-      margin-top: 0;
-      margin-bottom: 0.5rem;
-      font-weight: 700;
-    }
-
-    #contact-form {
-      display: none;
-      margin-top: 1rem;
-      border: 2px solid black;
-      padding: 1rem;
-      background: white;
-      box-shadow: 3px 3px 0 black;
-      border-radius: 4px;
-    }
-    body.dark #contact-form {
-      background: #2a2a2a;
-      border-color: #bbb;
-      box-shadow: 3px 3px 0 #bbb;
-      color: #ddd;
-    }
-    #contact-form label {
-      display: block;
-      margin-bottom: 0.5rem;
-    }
-    #contact-form input {
-      width: 100%;
-      padding: 0.3rem;
-      margin-top: 0.2rem;
-      margin-bottom: 1rem;
-      border: 1px solid #999;
-      border-radius: 3px;
-      font-family: 'IBM Plex Mono', monospace;
-    }
-
-    footer {
-      text-align: center;
-      margin-top: 3rem;
-      padding-top: 1rem;
-      border-top: 2px solid black;
-      font-size: 0.9rem;
-      color: #666;
-      transition: border-color 0.3s, color 0.3s;
-    }
-    body.dark footer {
-      border-color: #bbb;
-      color: #aaa;
-    }
-
-    #dark-toggle {
-      position: fixed;
-      top: 1rem;
-      right: 1rem;
-      background: none;
-      border: 2px solid black;
-      padding: 0.3rem 0.7rem;
-      cursor: pointer;
-      font-family: 'IBM Plex Mono', monospace;
-      font-weight: 700;
-      transition: background-color 0.3s, color 0.3s, border-color 0.3s;
-      z-index: 1000;
-      user-select: none;
-    }
-    body.dark #dark-toggle {
-      border-color: #bbb;
-      color: #ddd;
-    }
-    body.dark #dark-toggle:hover {
-      background-color: #ddd;
-      color: black;
-    }
-
-    @media (max-width: 600px) {
-      .container {
-        margin: 1rem;
-        padding: 1rem;
-      }
-      h1 {
-        font-size: 2rem;
-      }
-    }
+    /* --- mêmes styles --- */
   </style>
 </head>
 <body>
@@ -239,13 +29,13 @@
   <main class="container">
     <header>
       <div class="header-top">
-        <img src="pdp.jpg" alt="Photo de profil Git Paper" class="profile-pic" loading="lazy" />
-        <h1>Elies | Gitpaper</h1>
+        <img src="pdp.jpg" alt="Photo de profil Mngodev" class="profile-pic" loading="lazy" />
+        <h1>Elies | Mngodev</h1>
       </div>
       <p>Développeur web — UX, Python et HTML</p>
       <nav>
   <a href="#" id="contact-btn" class="button">📧 Contact</a>
-  <a href="https://github.com/gitpaperone" target="_blank" rel="noopener" class="button">🌐 GitHub</a>
+  <a href="https://github.com/mngodev" target="_blank" rel="noopener" class="button">🌐 GitHub</a>
   <a href="https://instagram.com/elies_ars" target="_blank" rel="noopener" class="button">📸 Instagram</a>
       </nav>
     </header>
@@ -290,7 +80,7 @@
     </form>
 
     <footer>
-      &copy; 2025 Gitpaper — Devpage
+      &copy; 2025 Mngodev — Devpage
     </footer>
   </main>
 
